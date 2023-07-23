@@ -1,8 +1,27 @@
-/*
+/* @settings
 
-This CSS file will be included with your plugin, and
-available in the app when your plugin is enabled.
-
-If your plugin does not need CSS, delete this file.
+name: Status Plus
+id: obsidian-status-plus
+settings:
+    -
+        id: clock-background
+        title: Clock Background
+        type: variable-themed-color
+        format: hex
+        opacity: false
+        default-light: '#add8e6'
+        default-dark: '#00008b'
+    
+    -
+        id: clock-order
+        title: Clock Order
+        type: variable-number
+        default: 1
 
 */
+
+.clock {
+    font-variant-numeric: tabular-nums;
+    background-color: var(--clock-background, #00008b);
+    order: var(--clock-order, 1);
+}
